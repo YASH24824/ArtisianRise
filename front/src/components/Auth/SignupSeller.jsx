@@ -11,13 +11,14 @@ const SignupSeller = () => {
   // Handle form submission
   const handleSignup = async (e) => {
     e.preventDefault();
+    console.log("Request gone")
     try {
       await axios.post('http://localhost:5000/seller', {
         username,
         email,
         password,
       });
-
+      console.log("Request setes")
       navigate('/SellerInformation');
 
       setUsername('');
